@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18 # Node.js version to use
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install # Install the dependencies for the project
+
+  pre_build:
+    commands:
+      - echo Preparing for the build...
+      - echo Checking directory...
+      - ls -la # Optional: List the files to check the directory structure
+
+  build:
+    commands:
+      - echo Build started on `date` # Logging the current date for reference
+      - npm run build # Runs the build script for Vite (vite build)
+
+artifacts:
+  files:
+    - "**/*" # Includes all files within the build folder
+  base-directory: dist # Vite's default output directory for production build
+  discard-paths: yes # Discards the directory structure when uploading to S3

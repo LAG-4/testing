@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import the Exo font */
+/* Import the Exo font */
+
+/* Apply Exo font globally */
+body {
+  font-family: 'Exo', sans-serif;
+}
+
+/* Add the rest of your CSS rules below */
+
+
+/* Add default styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+input,
+textarea {
+  font-family: inherit; /* Ensure they inherit the font from body */
+}
+
+/* Optional: Adjust font smoothing for better rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make scrollbar invisible for all elements */
+* {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Optional: Ensure scrolling still works for accessibility */
+body,
+html {
+  overflow-y: scroll; /* Keep scrolling functionality while hiding the scrollbar */
+}
